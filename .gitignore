@@ -5,3 +5,4 @@ tools/out/
 tools/__pycache__/
 next-env.d.ts
 *.tsbuildinfo
+*.log
