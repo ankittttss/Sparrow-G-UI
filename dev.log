@@ -1,0 +1,27 @@
+   ▲ Next.js 15.5.4
+   - Local:        http://localhost:3000
+   - Network:      http://172.29.208.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling / ...
+ ✓ Compiled / in 8.5s (573 modules)
+ GET / 200 in 8873ms
+ GET / 200 in 56ms
+ ○ Compiling /stem-solutions ...
+ ✓ Compiled /stem-solutions in 1116ms (567 modules)
+ GET /stem-solutions/ 200 in 1510ms
+ GET / 200 in 102ms
+ ○ Compiling /blog ...
+ ✓ Compiled /blog in 852ms (575 modules)
+ GET /blog/ 200 in 1078ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 869ms (583 modules)
+ GET /login/ 200 in 1127ms
+ GET / 200 in 91ms
+ GET / 200 in 145ms
+ GET / 200 in 94ms
+ GET / 200 in 68ms
+ ○ Compiling /shop ...
+ ✓ Compiled /shop in 1132ms (567 modules)
+ GET /shop/ 200 in 1536ms

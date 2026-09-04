@@ -1,0 +1,87 @@
+/* Base + keyframes + container queries, lifted verbatim from the design source. */
+*{box-sizing:border-box}
+body{margin:0;background:#FFFFFF;color:#131A22;font-family:'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#B4531F;text-decoration:none}
+a:hover{color:#8E3F14}
+button,input,select,textarea{font-family:inherit}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:#CFC9BE;border-radius:9px}
+@keyframes sgMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes sgFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes sgIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes sgPartners{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes sgReel{0%{transform:scale(1.04) translate3d(0,0,0)}50%{transform:scale(1.16) translate3d(-2%,-3%,0)}100%{transform:scale(1.04) translate3d(0,0,0)}}
+@keyframes sgReelBar{from{width:0%}to{width:100%}}
+@keyframes sgWord{0%{opacity:0;transform:translateY(16px) scale(.97);filter:blur(5px)}9%{opacity:1;transform:none;filter:blur(0)}86%{opacity:1;transform:none;filter:blur(0)}96%,100%{opacity:0;transform:translateY(-8px);filter:blur(4px)}}
+@keyframes sgUnderline{0%,10%{transform:scaleX(0)}34%,88%{transform:scaleX(1)}98%,100%{transform:scaleX(0)}}
+@keyframes sgSpin{to{transform:rotate(360deg)}}
+@keyframes sgVert{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@keyframes sgFeedRight{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes sgSpark{0%,100%{opacity:.25;transform:scale(.9) rotate(0deg)}50%{opacity:.9;transform:scale(1.12) rotate(12deg)}}
+.sgpartners:hover .sgtrack{animation-play-state:paused}
+.sgpartners{mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.sgshell{container-type:inline-size}
+.sgshell [data-nav-mob]{display:none}
+.sgshell [data-mobile-bar]{display:none}
+.sgrise{animation:sgIn .5s cubic-bezier(.2,.7,.3,1) both}
+@container (max-width:980px){.sgshell [data-nav-desk]{display:none!important}.sgshell [data-nav-mob]{display:flex!important}}
+@container (max-width:760px){.sgshell [data-hide-sm]{display:none!important}.sgshell [data-mobile-bar]{display:flex!important}.sgshell [data-pad]{padding-left:18px!important;padding-right:18px!important}}
+/* responsive pass */
+@container (max-width:1000px){
+  .sgshell [data-stackcard]{position:static!important;margin:0 0 18px!important}
+  .sgshell [data-stackbody]{min-height:auto!important}
+}
+@container (max-width:900px){
+  .sgshell [data-svgrid]{grid-template-columns:1fr!important}
+}
+@container (max-width:820px){
+  .sgshell .sgtrack{gap:44px!important}
+  .sgshell [data-feedcard]{width:270px!important}
+  .sgshell [data-reel]{aspect-ratio:4/5!important}
+}
+@container (max-width:620px){
+  .sgshell h1,.sgshell h2{text-wrap:balance}
+  .sgshell [data-feedcard]{width:236px!important}
+  .sgshell [data-pad]{padding-left:16px!important;padding-right:16px!important}
+  .sgshell input,.sgshell textarea,.sgshell select{font-size:15px!important}
+  .sgshell button{min-height:44px}
+}
+@container (max-width:420px){
+  .sgshell [data-feedcard]{width:200px!important}
+}
+
+/* Hover styles: the design expressed these as style-hover="" attributes, which
+   the runtime merged into the inline style. Inline styles outrank class
+   selectors, so each declaration carries !important to reproduce that. */
+.hv-06d8f0d3:hover{color:#131A22 !important;border-color:#D6D0C4 !important}
+.hv-08c78e8f:hover{background:#FFC53D !important;color:#131A22 !important}
+.hv-1de5f70e:hover{transform:translateY(-2px) !important}
+.hv-244d20f7:hover{transform:scale(1.08) !important}
+.hv-2d44b3db:hover{box-shadow:0 18px 40px rgba(19,26,34,.1) !important;border-color:#D6D0C4 !important}
+.hv-32cd8e82:hover{border-color:#131A22 !important;background:#FBF4E7 !important;transform:translateX(3px) !important}
+.hv-3e91f11c:hover{transform:translateY(-6px) !important;box-shadow:0 18px 40px rgba(19,26,34,.1) !important}
+.hv-4174ca2d:hover{border-color:#131A22 !important;color:#131A22 !important}
+.hv-4646287a:hover{box-shadow:0 14px 30px rgba(19,26,34,.08) !important;transform:translateY(-4px) !important}
+.hv-4927a4c8:hover{background:#EBE6DC !important}
+.hv-4da149b8:hover{background:#F4F1EC !important;border-color:#131A22 !important}
+.hv-4f9eb692:hover{color:#131A22 !important}
+.hv-500ffa86:hover{border-color:#D6D0C4 !important}
+.hv-5482e468:hover{box-shadow:0 12px 28px rgba(19,26,34,.08) !important;transform:translateY(-4px) !important}
+.hv-58e3dce0:hover{transform:translateY(-8px) !important;box-shadow:0 26px 54px rgba(19,26,34,.16) !important}
+.hv-6e577fca:hover{transform:translateY(-5px) !important;box-shadow:0 20px 44px rgba(19,26,34,.1) !important}
+.hv-76097081:hover{transform:translateY(-3px) !important}
+.hv-79fc015e:hover{transform:translateY(-6px) !important;box-shadow:0 24px 50px rgba(19,26,34,.18) !important}
+.hv-8376a743:hover{transform:translateY(-5px) !important;box-shadow:0 18px 40px rgba(19,26,34,.1) !important}
+.hv-88cacac1:hover{animation-play-state:paused !important}
+.hv-8b7ffd55:hover{box-shadow:0 22px 50px rgba(19,26,34,.14) !important;border-color:#D6D0C4 !important;transform:translateY(-4px) !important}
+.hv-91ea777c:hover{transform:translateY(-6px) !important;box-shadow:0 20px 44px rgba(19,26,34,.1) !important}
+.hv-9e8a5fea:hover{transform:translateY(-6px) !important;box-shadow:0 20px 44px rgba(19,26,34,.12) !important}
+.hv-a65fdea7:hover{border-color:#D6D0C4 !important;box-shadow:0 14px 32px rgba(19,26,34,.08) !important}
+.hv-b582bf2f:hover{border-color:#131A22 !important}
+.hv-b93e05a6:hover{background:#FFC53D !important}
+.hv-c1fcff06:hover{background:#F7F5F1 !important}
+.hv-c28e8f3b:hover{background:#F4F1EC !important}
+.hv-cda3e551:hover{transform:scale(1.05) !important}
+.hv-e326a6cd:hover{color:#131A22 !important;-webkit-text-stroke-color:#131A22 !important}
+.hv-f77e6cf3:hover{transform:translateY(-3px) !important;box-shadow:0 14px 30px rgba(255,197,61,.5) !important}
